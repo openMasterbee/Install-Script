@@ -50,7 +50,7 @@ echo "Crerated /opt/data/letsencrypt/nginx"
 chmod -R 777 /opt/data/letsencrypt
 echo "Made letsencrypt Folder 777"
 
-wget -P /opt/data/letsencrypt/nginx https://raw.githubusercontent.com/openMasterbee/Install-Script/master/Folder%20Creation/odoo10e/default.conf
+wget -P /opt/data/letsencrypt/nginx/ https://raw.githubusercontent.com/openMasterbee/Install-Script/master/Folder%20Creation/odoo10e/default.conf
 echo "Downloaded default.conf file"
 echo ""
 
@@ -78,3 +78,23 @@ echo "Crerated /opt/data/redis/storage"
 chmod -R 777 /opt/data/redis
 echo "Made redis Folder 777"
 echo ""
+
+echo "Folder creation finished."
+echo ""
+
+echo "Do you wish to pull down all images?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) image_pull() ; break;;
+        No ) echo "Image Pull Secussful." exit;;
+    esac
+done
+
+
+image_pull () {
+docker pull postgres:9.3
+docker pull redis
+docker pull nginx:alpine
+docker pull tozny/rancher-lets-encrypt
+docker pull razeen/odoo10e:v1.1
+}
