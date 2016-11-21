@@ -1,7 +1,13 @@
 #!/bin/bash
 
-echo "Now begain creating folder data"
-mkdir /opt/data/
+data="/opt/data"    # /   (root directory)
+if [ -e "$device0" ]
+then
+  echo "$device0 existed, now continue..."
+else
+  mkdir /opt/data
+  echo "$device0 crerated."
+fi
 
 echo "Now begain creating folder structure for odoo 10"
 
