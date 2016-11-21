@@ -20,12 +20,12 @@ echo "Crerated /opt/data/odoo10e/config"
 mkdir /opt/data/odoo10e/auto-backups
 echo "Crerated /opt/data/odoo10e/auto-backups"
 
+wget -P /opt/data/odoo10e/config/ https://raw.githubusercontent.com/openMasterbee/Install-Script/master/Folder%20Creation/odoo10e/odoo.conf
+echo "Downloaded odoo.conf file"
+
 chmod -R 777 /opt/data/odoo10e
 echo "Made odoo10e Folder 777"
 echo ""
-
-curl -sSL url | bash
-
 
 echo "Now begain creating folder structure for let's encrypt"
 
