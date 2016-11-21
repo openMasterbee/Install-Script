@@ -49,9 +49,10 @@ echo "Crerated /opt/data/letsencrypt/nginx"
 
 chmod -R 777 /opt/data/letsencrypt
 echo "Made letsencrypt Folder 777"
-echo ""
 
-# TODO add ngnix conf file
+wget -P /opt/data/letsencrypt/nginx https://raw.githubusercontent.com/openMasterbee/Install-Script/master/Folder%20Creation/odoo10e/default.conf
+echo "Downloaded default.conf file"
+echo ""
 
 echo "Now begain creating folder structure for postgres"
 
