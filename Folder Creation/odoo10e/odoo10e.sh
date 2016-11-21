@@ -8,7 +8,9 @@ else
   mkdir /opt/data
   echo "$device0 crerated."
 fi
-
+echo ""
+echo "----------------------------------------------------------------"
+echo ""
 echo "Now begain creating folder structure for odoo 10"
 
 mkdir /opt/data/odoo10e
@@ -32,7 +34,8 @@ echo "Downloaded odoo.conf file"
 chmod -R 777 /opt/data/odoo10e
 echo "Made odoo10e Folder 777"
 echo ""
-
+echo "----------------------------------------------------------------"
+echo ""
 echo "Now begain creating folder structure for let's encrypt"
 
 mkdir /opt/data/letsencrypt
@@ -53,7 +56,9 @@ echo "Made letsencrypt Folder 777"
 wget -P /opt/data/letsencrypt/nginx/ https://raw.githubusercontent.com/openMasterbee/Install-Script/master/Folder%20Creation/odoo10e/default.conf
 echo "Downloaded default.conf file"
 echo ""
-
+echo ""
+echo "----------------------------------------------------------------"
+echo ""
 echo "Now begain creating folder structure for postgres"
 
 mkdir /opt/data/postgres/
@@ -65,7 +70,8 @@ echo "Crerated /opt/data/postgres/database"
 chmod -R 777 /opt/data/postgres
 echo "Made postgres Folder 777"
 echo ""
-
+echo "----------------------------------------------------------------"
+echo ""
 
 echo "Now begain creating folder structure for redis"
 
@@ -81,14 +87,21 @@ echo ""
 
 echo "Folder creation finished."
 echo ""
+echo ""
+echo "----------------------------------------------------------------"
+echo ""
 
-echo "Do you wish to pull down all images?"
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) image_pull() ; break;;
-        No ) echo "Image Pull Secussful." exit;;
-    esac
-done
+
+read -r -p "Do you wish to pull down all images? [y/N] " response
+case $response in
+    [yY][eE][sS]|[yY])
+      image_pull()
+      echo "Image Pull Secussful."
+        ;;
+    *)
+      echo "Image pulling skiped. Process finish."
+        ;;
+esac
 
 
 image_pull () {
