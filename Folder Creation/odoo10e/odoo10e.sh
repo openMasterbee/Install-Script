@@ -44,9 +44,14 @@ echo "Crerated /opt/data/letsencrypt/verify"
 mkdir /opt/data/letsencrypt/certs
 echo "Crerated /opt/data/letsencrypt/certs"
 
+mkdir /opt/data/letsencrypt/nginx
+echo "Crerated /opt/data/letsencrypt/nginx"
+
 chmod -R 777 /opt/data/letsencrypt
 echo "Made letsencrypt Folder 777"
 echo ""
+
+# TODO add ngnix conf file
 
 echo "Now begain creating folder structure for postgres"
 
