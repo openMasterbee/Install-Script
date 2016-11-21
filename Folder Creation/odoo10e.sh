@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Now begain creating folder data"
+mkdir /opt/data/
+
 echo "Now begain creating folder structure for odoo 10"
 
 mkdir /opt/data/odoo10e
