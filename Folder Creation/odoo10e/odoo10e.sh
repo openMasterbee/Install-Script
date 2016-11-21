@@ -24,6 +24,8 @@ chmod -R 777 /opt/data/odoo10e
 echo "Made odoo10e Folder 777"
 echo ""
 
+curl -sSL url | bash
+
 
 echo "Now begain creating folder structure for let's encrypt"
 
