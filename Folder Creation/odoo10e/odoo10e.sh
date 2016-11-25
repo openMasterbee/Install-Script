@@ -91,4 +91,4 @@ echo ""
 echo "----------------------------------------------------------------"
 echo ""
 
-curl -sSL https... | bash
+curl -sSL https://raw.githubusercontent.com/openMasterbee/Install-Script/master/Folder%20Creation/odoo10e/pull_image.sh | bash
