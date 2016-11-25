@@ -5,3 +5,9 @@ With scripts in this folder, we will be able to setup system environment with on
 ```bash
 curl -sSL https://goo.gl/iSThuL | bash
 ```
+
+### Install latest docker.
+
+```bash
+curl -sSL https://get.docker.com | bash
+```
