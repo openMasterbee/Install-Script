@@ -3,5 +3,5 @@ With scripts in this folder, we will be able to setup system environment with on
 ### Install basic admin tools.
 
 ```bash
-curl -sSL https://goo.gl/ | bash
+curl -sSL https://goo.gl/iSThuL | bash
 ```
