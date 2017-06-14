@@ -21,5 +21,11 @@ sudo apt-get install -y \
   git \
   htop \
   nload \
+  nano \
   sysstat \
   iptraf \
+
+# Install bd
+
+wget -O /etc/bash_completion.d/bd https://raw.github.com/vigneshwaranr/bd/master/bash_completion.d/bd
+source /etc/bash_completion.d/bd
