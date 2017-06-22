@@ -22,6 +22,7 @@ sudo apt-get install -y \
   htop \
   nload \
   nano \
+  tree \
   sysstat \
   iptraf \
 
